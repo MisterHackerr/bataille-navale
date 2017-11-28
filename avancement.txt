@@ -47,7 +47,7 @@ A FAIRE pour finir l'étape 1 du projet :
 - Faire marcher les messages d'erreur, les messages à chaque navire touché, coulé, fin de partie, etc. (Choukri)
 - Faire le score
 - Faire la fonction qui place les navires de la flotte vers la grille du joueur en début de partie + pouvoir pivoter les navires
-- Faire les conditions pour que le viseur dépasse pas la grille
+- Faire les conditions pour que le viseur dépasse pas la grille( chourki)
 - Finir le jeu après avoir fait tout ça et vérifier que tout marche
 
 		
