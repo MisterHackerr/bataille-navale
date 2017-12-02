@@ -37,6 +37,29 @@ const int Grille::getNbColonnes()const{
 const int Grille::getNbLignes()const{
     return lig;
 }
+
+
+Cases* Grille::Random_Cases(){
+int i=0;
+int j=0;
+do{
+    i=rand()% getLargeur;
+    j=rand()% getHauteur;
+}
+while(caseValide(i,j)==false);
+Cases* ptr=at(i,j);
+if(ptr->getLibre==true){
+ptr->setLibre(false);
+}
+if(ptr->getOccupee()==true){
+ptr->setTouchee(true);
+}
+return ptr;
+}
+
+
+
+
  
  bool Grille::caseValide(int x, int y){
    if((x>0 && x<= (getNbColonnes()) && (y>0 && y<=(getNbLignes()) )))
