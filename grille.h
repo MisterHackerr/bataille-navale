@@ -36,8 +36,9 @@ public:
     const int getNbLignes()const;  //retourne le nombre de lignes de la grille
 	
     bool caseValide(int x, int y);
-    
+    Cases* Random_Cases();
 
+	
 };
 
 #endif
