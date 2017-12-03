@@ -29,3 +29,6 @@ void Case::afficher_case(Window& W, Color col) {
   else
     W.print(X, Y, " ", col);
 }
+void Case::suprime_case(Window& W, Color col){
+W.print(X, Y," ");
+}
