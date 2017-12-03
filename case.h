@@ -33,7 +33,7 @@ public:
 	void setLibre(bool B);
 	void setOccupee(bool B);
 	void setTouchee(bool B);
-    
+        void suprime_case(Window&, Color);
 	void afficher_case(Window&, Color);
 };
 
