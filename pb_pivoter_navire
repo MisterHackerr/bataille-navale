@@ -1,8 +1,0 @@
-QUAND JE DEPLACE 3 FOIS DE SUITE VERS LA GAUCHE LE NAVIRE SE DEFORME MDR
-
-void Navire::PivoterNavireGauche(){
-  for(int i=0;i< this->nbCases;i++){
-    tabCases[i].setX( tabCases[i].getY());
-    tabCases[i].setY( tabCases[i].getY()-i);
-    }
-  }
