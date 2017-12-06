@@ -32,10 +32,17 @@ class Navire{
   Color getCouleur() const;
   
   void setEtat(bool); // Permet d'affecter une valeur à l'attribut "estCoule". True = Coulé, False = Pas encore coulé
+void suprime_navire(Window& W, Color col);
 
-  void deplacerNavire(int x, int y); // Méthode pour déplacer chaque case du navire
+  void deplacerNavireHaut(); // Méthode pour déplacer chaque case du navire
   // Servira lorsqu'il faudra placer les navires en début de partie.
+  void deplacerNavireBas();
+  void deplacerNavireDroite();
+  void deplacerNavireGauche();
+  void PivoterNavireGauche();
+  void PivoterNavireDroite();
 
+ 
   // accesseurs en interrogation
   int nb_cases_touchees()    const;
   void couler(); // Si nb_cases_touchees == nbCases alors setEtat(True);
