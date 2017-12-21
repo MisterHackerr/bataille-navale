@@ -1,0 +1,37 @@
+Dans le main j'ai mis :
+
+      case KEY_DOWN: if(aDeplacer->peut_dep_navire(Joueur.getTabNavire())== true){
+	if(((joueur.getHauteur()-1) - aDeplacer->Y_max_case_navire()) != 0)
+	  aDeplacer->supprimer_navire(joueur); // Suppresion graphique
+	  aDeplacer->deplacerNavireBas();
+	  aDeplacer->afficher_navire(joueur, aDeplacer->getCouleur(), '_'); // Affichage graphique de la nouvelle position
+}
+	  else
+	  m->error_placement();
+	break;
+  
+  
+  
+  dans la classe navire ( cpp):
+  //test de deplacement du navire
+
+
+bool Navire::peut_dep_navire(Navire* tabNavires){
+    size_t x=this->X_max_case_navire();
+    size_t y=this->Y_min_case_navire()-1;
+    bool teste=true;
+      for(size_t i=0;i<5;i++){
+    if (tabNavires[i].getNbCases() > 0){
+      if (tabNavires[i].estDansNavire(x, y) == true)
+      teste=false;
+    }
+  }
+return teste;
+
+}
+
+dans la class grille dans le cpp
+// donne le tabNavire
+Navire* Grille::getTabNavire(){
+return tabNavires;
+}
